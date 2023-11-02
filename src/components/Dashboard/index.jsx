@@ -15,10 +15,13 @@ const Dashboard = () => {
         <button>Adicionar</button>
       </form>
       <section>
-        <select name="order">
-          <option value="0">Ordenar pelo mais recente</option>
-        </select>
-        <button>Limpar tela</button>
+        <div></div>
+        <div className="section-buttons">
+          <select name="order">
+            <option value="0">Ordenar pelo mais recente</option>
+          </select>
+          <button>Limpar tela</button>
+        </div>
       </section>
     </main>
   )
