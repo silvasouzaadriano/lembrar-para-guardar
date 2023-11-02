@@ -6,7 +6,6 @@ const QTD_ITEM_VALUES = Array.from({ length: 100 }, (_, i) => i + 1)
 
 const Dashboard = () => {
   const [itens, setItens] = useState([])
-  console.log(itens)
 
   const handleAddItem = (item) => {
     setItens((i) => [...i, item])
@@ -77,7 +76,7 @@ const Dashboard = () => {
           </div>
         </section>
       </main>
-      <Footer qtdItens={itens.length} />
+      <Footer itens={itens} />
     </>
   )
 }
