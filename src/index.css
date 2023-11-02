@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #ced4da;
+  background-color: #292929;
+  line-height: 1.3;
+  font-size: 1.6rem;
+}

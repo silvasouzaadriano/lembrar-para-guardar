@@ -1,3 +1,5 @@
-const App = () => <h1>Boilerplate Vite + React</h1>
+import { Header } from './components/Header'
+
+const App = () => <Header />
 
 export { App }
