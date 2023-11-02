@@ -18,7 +18,68 @@ const Dashboard = () => {
         <button>Adicionar</button>
       </form>
       <section>
-        <div></div>
+        <ul>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+          <li>
+            <input type="checkbox" name="item" />
+            <p>6 halteres 10kg</p>
+            <button>X</button>
+          </li>
+        </ul>
         <div className="section-buttons">
           <select name="order">
             <option value="0">Ordenar pelo mais recente</option>
