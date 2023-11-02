@@ -1,6 +1,4 @@
 header {
-  width: 100%;
-  max-width: 68.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +20,8 @@ h1 {
 
 @media (max-width: 700px) {
   header {
+    width: 100%;
+    max-width: 68.3rem;
     margin: 0;
   }
 
