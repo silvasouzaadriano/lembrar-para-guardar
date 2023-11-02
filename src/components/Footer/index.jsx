@@ -1,8 +1,8 @@
 import './index.css'
 
-const Footer = () => (
+const Footer = ({ qtdItens }) => (
   <footer>
-    <p>Você tem 0 itens na lista</p>
+    <p>Você tem {qtdItens} itens na lista</p>
   </footer>
 )
 
