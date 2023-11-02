@@ -11,19 +11,26 @@ form {
   gap: 1rem;
   background-color: #4b527e;
   padding: 1.5rem 0;
+  color: #ffff;
 }
 
 form label {
   font-size: 1rem;
-  color: #ffff;
 }
 
-form input {
+form select,
+input {
   background-color: #7d81ae;
   color: #ffff;
+  font-weight: 700;
   padding: 0.5rem 1.5rem;
   border: none;
   border-radius: 5px;
+}
+
+form select {
+  margin: 0;
+  width: 5rem;
 }
 
 form button {
@@ -41,6 +48,8 @@ section {
   gap: 1rem;
   background-color: #e5c3a7;
   padding: 1.5rem 0;
+  color: #ffff;
+  font-weight: 700;
 }
 
 section select {

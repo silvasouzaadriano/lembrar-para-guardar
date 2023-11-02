@@ -10,8 +10,11 @@ const Dashboard = () => {
     <main>
       <form onSubmit={handleSubmit}>
         <label htmlFor="">O que você precisa guardar ?</label>
-        <input type="number" name="qtdItem" />
-        <input type="text" name="item" />
+        <select name="qtdItem">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <input type="text" name="item" placeholder="Manda aqui" />
         <button>Adicionar</button>
       </form>
       <section>
