@@ -125,7 +125,7 @@ const Dashboard = () => {
             >
               <option value="">Escolha uma opção</option>
               <option value="saved">Mostrar guardados</option>
-              <option value="ascending">Ordenar alfabética</option>
+              <option value="ascending">Ordem alfabética</option>
               <option value="recent">Ordenar por mais recentes</option>
             </select>
             <button onClick={handleClearitems}>Limpar tela</button>
