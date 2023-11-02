@@ -11,6 +11,9 @@ const Dashboard = () => {
     setItens((i) => [...i, item])
   }
 
+  const removeItem = (itemId) =>
+    setItens((i) => i.filter((obj) => obj.id !== itemId))
+
   const clearItens = () => setItens([])
 
   const handleSubmit = (e) => {
@@ -55,7 +58,7 @@ const Dashboard = () => {
                 <p>
                   {qtd} {description}
                 </p>
-                <button>X</button>
+                <button onClick={() => removeItem(id)}>X</button>
               </li>
             ))}
           </ul>
