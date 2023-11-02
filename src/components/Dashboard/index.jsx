@@ -6,6 +6,7 @@ const QTD_ITEM_VALUES = Array.from({ length: 100 }, (_, i) => i + 1)
 
 const Dashboard = () => {
   const [itens, setItens] = useState([])
+  console.log(itens)
 
   const handleAddItem = (item) => {
     setItens((i) => [...i, item])
@@ -15,6 +16,11 @@ const Dashboard = () => {
     setItens((i) => i.filter((obj) => obj.id !== itemId))
 
   const clearItens = () => setItens([])
+
+  const saveItem = (itemId) =>
+    setItens((i) =>
+      i.map((obj) => (obj.id === itemId ? { ...obj, saved: !obj.saved } : obj)),
+    )
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -54,8 +60,9 @@ const Dashboard = () => {
                   type="checkbox"
                   name="item"
                   checked={saved ? true : false}
+                  onChange={() => saveItem(id)}
                 />
-                <p>
+                <p className={saved ? 'savedItem' : 'unSavedItem'}>
                   {qtd} {description}
                 </p>
                 <button onClick={() => removeItem(id)}>X</button>

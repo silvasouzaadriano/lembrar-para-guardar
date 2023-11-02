@@ -99,3 +99,11 @@ section ul li button {
   font-weight: 700;
   color: red;
 }
+
+.savedItem {
+  text-decoration: line-through;
+}
+
+.unSavedItem {
+  text-decoration: none;
+}
