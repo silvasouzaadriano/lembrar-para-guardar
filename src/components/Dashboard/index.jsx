@@ -11,6 +11,8 @@ const Dashboard = () => {
     setItens((i) => [...i, item])
   }
 
+  const clearItens = () => setItens([])
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (e.target.elements.descItem.value) {
@@ -61,7 +63,7 @@ const Dashboard = () => {
             <select name="order">
               <option value="0">Ordenar pelo mais recente</option>
             </select>
-            <button>Limpar tela</button>
+            <button onClick={clearItens}>Limpar tela</button>
           </div>
         </section>
       </main>
