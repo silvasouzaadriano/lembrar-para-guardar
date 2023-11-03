@@ -1,7 +1,6 @@
 import './index.css'
 
 const Footer = ({ items }) => {
-  console.log('items: ', items)
   const qtdItems = items.length
   const qtdSaved = items.reduce((acc, item) => {
     if (item.saved) {
