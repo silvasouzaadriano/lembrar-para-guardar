@@ -107,7 +107,7 @@ const Dashboard = () => {
                 <input
                   type="checkbox"
                   name="item"
-                  checked={saved ? true : false}
+                  checked={saved}
                   onChange={() => handleSaveItem(id)}
                 />
                 <p className={saved ? 'savedItem' : 'unSavedItem'}>
