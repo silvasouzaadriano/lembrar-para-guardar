@@ -70,18 +70,17 @@ const Dashboard = () => {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (e.target.elements.descItem.value) {
       const item = {
         id: crypto.randomUUID(),
-        qtd: e.target.elements.qtdItem.value,
+        qtd: +e.target.elements.qtdItem.value,
         description: e.target.elements.descItem.value,
         saved: false,
       }
       handleAddItem(item)
-      e.target.elements.qtdItem.value = 1
-      e.target.elements.descItem.value = null
+      await e.target.reset()
     }
   }
 
