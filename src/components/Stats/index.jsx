@@ -1,6 +1,6 @@
 import './index.css'
 
-const Footer = ({ items }) => {
+const Stats = ({ items }) => {
   const qtdItems = items.length
   const qtdSaved = items.reduce((acc, item) => {
     if (item.saved) {
@@ -24,4 +24,4 @@ const Footer = ({ items }) => {
   )
 }
 
-export { Footer }
+export { Stats }

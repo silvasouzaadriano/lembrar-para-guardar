@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Footer } from '../Footer'
 import './index.css'
 import { FormAddItems } from '../FormAddItem'
 import { ListOfItems } from '../ListOfItems'
 import { Filters } from '../Filters'
+import { Stats } from '../Stats'
 
 localStorage.setItem('items', JSON.stringify([]))
 
@@ -102,7 +102,7 @@ const Dashboard = () => {
           />
         </section>
       </main>
-      <Footer items={items} />
+      <Stats items={items} />
     </>
   )
 }
