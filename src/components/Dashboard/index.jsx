@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import './index.css'
+import { Logo } from '../Logo'
 import { FormAddItems } from '../FormAddItem'
 import { ListOfItems } from '../ListOfItems'
 import { Filters } from '../Filters'
 import { Stats } from '../Stats'
+
+import './index.css'
 
 localStorage.setItem('items', JSON.stringify([]))
 
@@ -88,6 +90,7 @@ const Dashboard = () => {
 
   return (
     <>
+      <Logo />
       <main>
         <FormAddItems onHandleSubmit={handleSubmit} />
         <section>
