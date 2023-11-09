@@ -3,6 +3,7 @@ import { Footer } from '../Footer'
 import './index.css'
 import { FormAddItems } from '../FormAddItem'
 import { ListOfItems } from '../ListOfItems'
+import { Filters } from '../Filters'
 
 localStorage.setItem('items', JSON.stringify([]))
 
@@ -95,19 +96,10 @@ const Dashboard = () => {
             onHandleSaveItem={handleSaveItem}
             onHandleRemoveItem={handleRemoveItem}
           />
-          <div className="section-buttons">
-            <select
-              name="sortitems"
-              onChange={(e) => handleSortitems(e)}
-              id="sortItems"
-            >
-              <option value="">Escolha uma opção</option>
-              <option value="saved">Mostrar guardados</option>
-              <option value="ascending">Ordem alfabética</option>
-              <option value="recent">Ordenar por mais recentes</option>
-            </select>
-            <button onClick={handleClearitems}>Limpar tela</button>
-          </div>
+          <Filters
+            onHandleSortitems={handleSortitems}
+            onHandleClearitems={handleClearitems}
+          />
         </section>
       </main>
       <Footer items={items} />
