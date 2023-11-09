@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Footer } from '../Footer'
 import './index.css'
 import { FormAddItems } from '../FormAddItem'
+import { ListOfItems } from '../ListOfItems'
 
 localStorage.setItem('items', JSON.stringify([]))
 
@@ -89,22 +90,11 @@ const Dashboard = () => {
       <main>
         <FormAddItems onHandleSubmit={handleSubmit} />
         <section>
-          <ul>
-            {items.map(({ id, qtd, description, saved }) => (
-              <li key={id}>
-                <input
-                  type="checkbox"
-                  name="item"
-                  checked={saved}
-                  onChange={() => handleSaveItem(id)}
-                />
-                <p className={saved ? 'savedItem' : 'unSavedItem'}>
-                  {qtd} {description}
-                </p>
-                <button onClick={() => handleRemoveItem(id)}>X</button>
-              </li>
-            ))}
-          </ul>
+          <ListOfItems
+            items={items}
+            onHandleSaveItem={handleSaveItem}
+            onHandleRemoveItem={handleRemoveItem}
+          />
           <div className="section-buttons">
             <select
               name="sortitems"
