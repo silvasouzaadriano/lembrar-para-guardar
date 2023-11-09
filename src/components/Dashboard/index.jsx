@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Footer } from '../Footer'
 import './index.css'
+import { FormAddItems } from '../FormAddItem'
 
-const QTD_ITEM_VALUES = Array.from({ length: 100 }, (_, i) => i + 1)
 localStorage.setItem('items', JSON.stringify([]))
 
 const Dashboard = () => {
@@ -87,18 +87,7 @@ const Dashboard = () => {
   return (
     <>
       <main>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="">O que você precisa guardar ?</label>
-          <select name="qtdItem">
-            {QTD_ITEM_VALUES.map((value) => (
-              <option value={value} key={value}>
-                {value}
-              </option>
-            ))}
-          </select>
-          <input type="text" name="descItem" placeholder="Manda aqui" />
-          <button>Adicionar</button>
-        </form>
+        <FormAddItems onHandleSubmit={handleSubmit} />
         <section>
           <ul>
             {items.map(({ id, qtd, description, saved }) => (
